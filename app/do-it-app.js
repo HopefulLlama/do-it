@@ -1,0 +1,1 @@
+var doItApp = angular.module('doItApp', []);
