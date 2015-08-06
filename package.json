@@ -1,30 +1,30 @@
 {
-	"name": "DoIt",
-	"version": "0.0.1",
-	"description": "JUST DO IT",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"postinstall": "bower install && grunt build"
-	},
-	"dependencies": {
-		"express": "*",
-		"http": "*"
-	},
-	"engines": {
-		"node": "*",
-		"npm": "*"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/HopefulLlama/do-it.git"
-	},
-	"keywords": [
-		"node",
-		"heroku",
-		"express"
-	],
-	"debug": false,
-	"route": "/",
-	"port": "5000"
+  "name": "DoIt",
+  "version": "0.0.1",
+  "description": "JUST DO IT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "bower": "^1.4.1",
+    "express": "^4.13.3"
+  },
+  "engines": {
+    "node": "^0.10.32",
+    "npm": "^1.4.28"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HopefulLlama/do-it.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "debug": false,
+  "route": "/",
+  "port": "5000"
 }
