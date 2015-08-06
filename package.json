@@ -1,0 +1,30 @@
+{
+	"name": "DoIt",
+	"version": "0.0.1",
+	"description": "JUST DO IT",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"postinstall": "bower install && grunt build"
+	},
+	"dependencies": {
+		"express": "*",
+		"http": "*"
+	},
+	"engines": {
+		"node": "*",
+		"npm": "*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/HopefulLlama/do-it.git"
+	},
+	"keywords": [
+		"node",
+		"heroku",
+		"express"
+	],
+	"debug": false,
+	"route": "/",
+	"port": "5000"
+}
