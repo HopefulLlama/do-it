@@ -11,13 +11,21 @@
 	<script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./src/do-it-app.js"></script>
 	<script type="text/javascript" src="./src/do-it-text-service.js"></script>
+	<script type="text/javascript" src="./src/do-it-image-service.js"></script>
 	<script type="text/javascript" src="./src/do-it-controller.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body data-ng-app="doItApp" data-ng-controller="DoItController">
 	<div class="container">
-		<div class="col-xs-12">{{doIt.text}}</div>
+		<div class="col-xs-6" ng-class="{'col-xs-push-6': doIt.image.orientation === 'left'}" >
+			<blockquote ng-if="doIt.text" ng-class="{'blockquote-reverse': doIt.image.orientation === 'right'}">
+				<p>{{doIt.text}}</p>
+			</blockquote>
+		</div>
+		<div class="col-xs-6" ng-class="{'col-xs-pull-6': doIt.image.orientation === 'left'}">
+			<img class="img-responsive text-center" ng-src="{{doIt.image.path}}" />
+		</div>
 		<div class="col-xs-12">
 			<button type="button" class="btn btn-lg btn-info col-xs-12" data-ng-click="getRandomDoIt()">Motivate Me!</button>
 		</div>
