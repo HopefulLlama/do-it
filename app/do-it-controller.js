@@ -1,11 +1,21 @@
-doItApp.controller('DoItController', ['$scope', 'DoItText', 'DoItImage', function($scope, DoItText, DoItImage) {
+doItApp.controller('DoItController', ['$scope', 'DoItQuote', 'DoItImage', function($scope, DoItQuote, DoItImage) {
+	$scope.DoItQuote = DoItQuote;
+	$scope.DoItImage = DoItImage; 
+
 	$scope.doIt = {
-		text: null,
+		quote: null,
 		image: null
 	};
 
+	$scope.withAudio = false;
+
 	$scope.getRandomDoIt = function() {
-		$scope.doIt.text = DoItText.getRandomDoItText();
+		$scope.doIt.quote = DoItQuote.getRandomDoItQuote();
 		$scope.doIt.image = DoItImage.getRandomDoItImage();
+
+		if($scope.withAudio) {
+			var audio = new Audio(DoItQuote.baseUrl + $scope.doIt.quote.audioName);
+			audio.play();
+		}
 	};
 }]);

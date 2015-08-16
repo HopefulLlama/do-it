@@ -1,10 +1,11 @@
 doItApp.service('DoItImage', [function() {
+	this.baseUrl = "src/assets/images/";
 	this.doItImages = [
-		{path: "src/assets/boots.png", orientation: "left"},
-		{path: "src/assets/crush.png", orientation: "right"},
-		{path: "src/assets/illuminati-crotch.png", orientation: "left"},
-		{path: "src/assets/super-saiyan.png", orientation: "right"},
-		{path: "src/assets/wave.png", orientation: "left"}
+		{path: "boots.png", orientation: "left"},
+		{path: "crush.png", orientation: "right"},
+		{path: "illuminati-crotch.png", orientation: "left"},
+		{path: "super-saiyan.png", orientation: "right"},
+		{path: "wave.png", orientation: "left"}
 	];
 
 	this.getRandomDoItImage = function() {
